@@ -3,14 +3,14 @@ from flask import Flask
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
-
+from db import db, ma
 
 from users.resources import UserSignUp, UserSignIn, UsersResource
 from employees.resources import Employee, EmployeeList
 
-from db import db, ma
 
-    
+
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fjytmlxs:w1u4JkUBdCxFf0iVBFUlb6tdwGDD6BA4@lucky.db.elephantsql.com/fjytmlxs'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -23,6 +23,7 @@ CORS(app)
 
 db.init_app(app)
 ma.init_app(app)
+
 @app.before_first_request
 def create_tables():
     db.create_all()
