@@ -10,7 +10,7 @@ from employees.resources import Employee, EmployeeList
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pcmotjxy:UwgnK4YOCTL4AFtEtFg_jNN5NELLNXZ0@lucky.db.elephantsql.com/pcmotjxy'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fjytmlxs:w1u4JkUBdCxFf0iVBFUlb6tdwGDD6BA4@lucky.db.elephantsql.com/fjytmlxs'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
